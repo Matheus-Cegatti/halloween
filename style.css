@@ -1,0 +1,114 @@
+body {
+    background-color: #272121;
+    font-family: 'Sigmar One', cursive;
+}
+
+section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pumpkin-1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    filter: drop-shadow(0px 5px 20px rgba(237, 81, 7, 1));
+    animation: brilho 1s infinite alternate;
+}
+
+@keyframes brilho {
+    from {
+        filter: drop-shadow(0px 5px 20px rgba(237, 81, 7, 1));
+    }
+    to {
+        filter: drop-shadow(0px 0px 5px rgba(237, 81, 7, 1));
+    }
+}
+
+.aranha {
+    position: absolute;
+    top: 0;
+    animation: aranha 10s ease-in-out infinite;
+}
+
+@keyframes aranha {
+    0%,100% {
+        transform: translateY(-500px)
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+.pumpkin-2 {
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    animation: abobora 5s ease-in-out infinite;
+}
+
+@keyframes abobora {
+    0%, 100% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+.titulo {
+    position: relative;
+    font-size: 7rem;
+    color: #0e3742;
+    text-shadow: none;
+    animation: iluminaTexto 5s infinite linear;
+}
+
+@keyframes iluminaTexto {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% {
+        color: rgba(255, 255, 255, 0.1);
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100% {
+        color: #E2703A;
+        text-shadow: 0 0 10px #E2703A,
+										0 0 20px #E2703A,
+										0 0 40px #E2703A,
+										0 0 80px #E2703A,
+										0 0 120px #E2703A;
+    }
+}
+
+
+.fantasma {
+    width: 15%;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    animation: fantasma 10s ease-in-out infinite;
+}
+
+@keyframes fantasma {
+    0%,70%,100% {
+        opacity: 0;
+        bottom: 15px;
+    }
+
+    50%,85% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+
+.teia-aranha {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	mix-blend-mode: screen;
+}
